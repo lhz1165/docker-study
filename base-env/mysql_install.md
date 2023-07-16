@@ -66,11 +66,13 @@ docker run -it -d --name mysql8 \
 docker.io/mysql:8.0.32
 
 /进入容器 支持远程连接
+mysql -P3307 -u root -p
 ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'root';
 //刷新
 flush privileges;
 
-//去在/etc/mysql/conf.d增加或者修改mysqld的配置 
+//去在/etc/mysql/conf.d或者/etc/my.cnf 增加或者修改mysqld的配置
+[mysqld]
 port=3307
 
 ```
