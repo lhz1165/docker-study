@@ -1,4 +1,4 @@
-# xxjob
+# 1.xxjob 和mysql 容器单独运行
 
 拉取xxjob代码
 
