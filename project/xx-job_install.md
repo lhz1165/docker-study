@@ -2,6 +2,8 @@
 
 拉取xxjob代码
 
+-t 表示指定 【镜像仓库名称】/【镜像名称】:【镜像标签】 【.】表示使用当前目录下的Dockerfile
+
 使用当前目录的 Dockerfile 创建镜像，标签为 xxjob/xxjob:0.0.1
 
 **镜像名称** xxjob/xxjob
