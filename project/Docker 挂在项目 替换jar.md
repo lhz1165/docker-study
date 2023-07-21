@@ -10,7 +10,7 @@ ENV TZ=Asia/Shanghai
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN mkdir /target/
 # 将当前目录下的jar包复制到docker容器的/目录下  改成自己项目的名字
-ADD target/myproject-*.jar /target/myproject-0.0.1-SNAPSHOT.jar
+# ADD target/myproject-*.jar /target/myproject-0.0.1-SNAPSHOT.jar
 # 容器暴露13333和5005端口
 EXPOSE 13333
 EXPOSE 5005
