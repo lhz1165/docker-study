@@ -43,7 +43,7 @@ docker.io/mysql:5.7
 ### mysql8(修改端口为3307)
 
 ```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/bim?serverTimezone=Asia/Shanghai&zeroDateTimeBehavior=convertToNull&autoReconnect=true&useSSL=false&failOverReadOnly=false
+spring.datasource.url=jdbc:mysql://localhost:3306/bim?serverTimezone=Asia/Shanghai&autoReconnect=true&autoReconnect=true&useSSL=false&characterEncoding=utf8
 spring.datasource.username=root
 spring.datasource.password=root
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
