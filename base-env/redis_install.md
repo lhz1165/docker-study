@@ -18,6 +18,7 @@ nginx# 创建挂载目录
 mkdir -p /home/nginx/conf
 mkdir -p /home/nginx/log
 mkdir -p /home/nginx/html
+mkdir -p  /home/file/attachment/
 
 # 生成容器
 docker run --name nginx -p 9001:80 -d nginx
@@ -31,11 +32,12 @@ docker cp nginx:/usr/share/nginx/html /home/nginx/
 
 docker run \
 -p 9002:80 \
---name nginx \
+--name nginx2 \
 -v /home/nginx/conf/nginx.conf:/etc/nginx/nginx.conf \
 -v /home/nginx/conf/conf.d:/etc/nginx/conf.d \
 -v /home/nginx/log:/var/log/nginx \
 -v /home/nginx/html:/usr/share/nginx/html \
+-v /tmp/bussiness/attachment:/usr/local/business/attachment \
 -d nginx:1.16.1
 ```
 
