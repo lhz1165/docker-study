@@ -13,7 +13,7 @@
   
   
    location  /app-system/attachment/ {
-                alias /usr/local/business/attachment/; # 必须加/
+            alias /usr/local/business/attachment/; # 必须加/
          	add_header Access-Control-Allow-Origin '*';
 			add_header Access-Control-Allow-Methods 'GET, POST, OPTIONS, PUT, DELETE';
 			add_header Access-Control-Allow-Headers 'DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization';
