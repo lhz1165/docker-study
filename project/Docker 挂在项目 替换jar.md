@@ -45,3 +45,15 @@ maven打包好了只需要重启容器，就可以执行新的代码
 mvn clean package -pl myproject -am
 ```
 
+
+
+pub-system 打包
+
+```
+//ubuntu里面
+//pub image
+docker build -t pub:v1 .
+//pub container
+docker run --name pub-system -d -p 12006:12006 -v /mnt/d/java/PROJECT_SPASE/public-/pub-system/buss/target:/target pub:v1
+```
+
