@@ -67,7 +67,16 @@ docker.io/mysql:8.0.32
 
 /进入容器 支持远程连接
 mysql -P3307 -u root -p
+//一. 解决host不受限制
+//1. 授予指定用户 'root'@'%' 对所有数据库和所有表的所有权限，并设置密码为 '12345'，同时允许该用户将权限授予其他用户
+//GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '{password}' WITH GRANT OPTION;
+//2. 授予指定用户 'root'@'%' 对所有数据库和所有表的所有权限 表示host不受限制。上面的可能有问题
+//grant all privileges on *.* to 'root'@'%';
+
+//二.
+//修改密码加密方式
 ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'root';
+
 //刷新
 flush privileges;
 
