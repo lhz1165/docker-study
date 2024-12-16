@@ -6,7 +6,7 @@
 
  http://localhost:9002/app-system/attachment/（必须以/结尾）  
 
-可以访问到/usr/local/business/attachment  目录
+可以访问到/usr/local/business/attachment  目录，**alias 会替换 location**
 
 ```config
   
@@ -31,7 +31,7 @@
 
  http://localhost:9002/attachment/
 
-可以访问到/usr/local/business/attachment  目录,root会拼接url
+可以访问到/usr/local/business/attachment  目录,**root+location**
 
 ```
  location  /attachment/ {
